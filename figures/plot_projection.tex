@@ -1,0 +1,70 @@
+% plot_projection.tex -- the M-projection of the unconstrained maximiser Sigma^{-1} mu onto Lambda
+% in dimension two, under negative correlation (left) and positive correlation (right).
+% Compiles on its own (pdflatex plot_projection.tex) and produces plot_projection.pdf.
+% Unit variances, M = Sigma = [[1, rho], [rho, 1]], c = 1.  Everything below is computed with pgfmath
+% from (mu_1, mu_2, rho) of each panel; the ellipses are the level sets of the quadratic growth
+% functional, i.e. {lambda : (lambda - lambda°)' M (lambda - lambda°) = const}, the thick one touching
+% Lambda at the constrained maximiser.
+\def\jobname{plot_projection}
+\documentclass[tikz,border=2pt]{standalone}
+\usepackage{amsmath,amssymb,bm}
+
+\definecolor{pastelblue}{RGB}{80,140,210}
+\definecolor{pastelred}{RGB}{210,100,100}
+
+% ---- parameters ------------------------------------------------------------------------
+\pgfmathsetmacro{\muLa}{-0.60}   % left panel:  mu = (-0.60, 0.87), rho = -0.4
+\pgfmathsetmacro{\muLb}{0.87}    %   -> Sigma^{-1} mu = (-0.30, 0.75); coordinate 1 is dropped, the projection
+\pgfmathsetmacro{\rhoL}{-0.4}    %      lands on the lambda_2-axis at (0, 0.87), the budget is slack
+\pgfmathsetmacro{\muRa}{0.91}    % right panel: mu = (0.91, 0.97), rho = +0.4
+\pgfmathsetmacro{\muRb}{0.97}    %   -> Sigma^{-1} mu = (0.62, 0.72), total stake 1.34 > 1, the projection
+\pgfmathsetmacro{\rhoR}{0.4}     %      lands on the budget face at (0.45, 0.55)
+\pgfmathsetmacro{\unit}{2.6}     % cm per bet unit
+\pgfmathsetmacro{\xmin}{-0.72}   % panel range (the same for both panels)
+\pgfmathsetmacro{\xmax}{1.28}
+\pgfmathsetmacro{\ymin}{-0.15}
+\pgfmathsetmacro{\ymax}{1.28}
+
+% ---- one panel: #1 = mu_1, #2 = mu_2, #3 = rho ----------------------------------------------
+\newcommand{\projpanel}[3]{%
+  \pgfmathsetmacro{\muone}{#1}\pgfmathsetmacro{\mutwo}{#2}\pgfmathsetmacro{\rhoval}{#3}
+  \pgfmathsetmacro{\detM}{1-\rhoval*\rhoval}
+  \pgfmathsetmacro{\cx}{(\muone-\rhoval*\mutwo)/\detM}        % unconstrained maximiser Sigma^{-1} mu
+  \pgfmathsetmacro{\cy}{(\mutwo-\rhoval*\muone)/\detM}
+  \pgfmathsetmacro{\stot}{\cx+\cy}
+  \pgfmathsetmacro{\hx}{\cx-(\stot-1)/2}                      % M-projection onto the budget hyperplane
+  \pgfmathsetmacro{\hy}{\cy-(\stot-1)/2}                      % (along the diagonal for equal variances)
+  % constrained maximiser: sign constraint active -> single Kelly stake capped at 1; else budget test
+  \pgfmathsetmacro{\px}{ifthenelse(\cx<0, 0, ifthenelse(\cy<0, min(\muone,1), ifthenelse(\stot<=1, \cx, ifthenelse(\hx<0, 0, ifthenelse(\hy<0, 1, \hx)))))}
+  \pgfmathsetmacro{\py}{ifthenelse(\cx<0, min(\mutwo,1), ifthenelse(\cy<0, 0, ifthenelse(\stot<=1, \cy, ifthenelse(\hx<0, 1, ifthenelse(\hy<0, 0, \hy)))))}
+  \pgfmathsetmacro{\dx}{\px-\cx}\pgfmathsetmacro{\dy}{\py-\cy}
+  \pgfmathsetmacro{\cstar}{max(\dx*\dx+\dy*\dy+2*\rhoval*\dx*\dy, 0.0001)}   % M-distance^2 to Lambda
+  \begin{scope}
+    \clip (\xmin,\ymin) rectangle (\xmax,\ymax);
+    % axes and the budget face of Lambda
+    \draw[black!75, line width=0.6pt] (\xmin,0) -- (\xmax,0);
+    \draw[black!75, line width=0.6pt] (0,\ymin) -- (0,\ymax);
+    \draw[black!75, line width=0.6pt] (1,0) -- (0,1);
+    % level sets: semi-axes sqrt(c/(1+rho)) along (1,1) and sqrt(c/(1-rho)) along (1,-1)
+    \foreach \f in {0.3,0.6,1.5}{%
+      \pgfmathsetmacro{\ra}{sqrt(\f*\cstar/(1+\rhoval))}\pgfmathsetmacro{\rb}{sqrt(\f*\cstar/(1-\rhoval))}
+      \draw[pastelblue, line width=0.7pt, rotate around={45:(\cx,\cy)}] (\cx,\cy) ellipse [x radius=\ra, y radius=\rb];}
+    \pgfmathsetmacro{\ra}{sqrt(\cstar/(1+\rhoval))}\pgfmathsetmacro{\rb}{sqrt(\cstar/(1-\rhoval))}
+    \draw[pastelblue, line width=1.3pt, rotate around={45:(\cx,\cy)}] (\cx,\cy) ellipse [x radius=\ra, y radius=\rb];
+    % unconstrained maximiser (blue) and constrained maximiser (red)
+    \fill[pastelblue!80!black] (\cx,\cy) circle (1.9pt);
+    \fill[pastelred] (\px,\py) circle (2.3pt);
+  \end{scope}
+}
+
+\begin{document}
+\begin{tikzpicture}
+  \pgfmathsetmacro{\panelw}{(\xmax-\xmin)*\unit+0.8}        % panel pitch in cm
+  \begin{scope}[x=\unit cm, y=\unit cm]
+    \projpanel{\muLa}{\muLb}{\rhoL}
+  \end{scope}
+  \begin{scope}[shift={(\panelw cm,0)}, x=\unit cm, y=\unit cm]
+    \projpanel{\muRa}{\muRb}{\rhoR}
+  \end{scope}
+\end{tikzpicture}
+\end{document}

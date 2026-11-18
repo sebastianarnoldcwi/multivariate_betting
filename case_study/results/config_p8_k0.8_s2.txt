@@ -1,0 +1,6 @@
+endpoints ['visit', 'oop', 'borrow', 'phq2', 'baddays', 'fairpoor', 'unhappy', 'er'] (p=8), kappa=0.8, pairs 6609
+  alpha=0.05: rejection Avg 363, MV 300, UP 90
+  alpha=0.001: rejection Avg 814, MV 633, UP 604
+  alpha=1e-05: rejection Avg 1731, MV 695, UP 678
+  final log-wealth Avg 38.0, MV 146.4, UP 146.5; at round 1000: 7.5, 14.4, 16.3
+  random pairings (50, horizon 2000): median [IQR] rejection Avg 546 [360,781], MV 247 [105,412], UP 137 [81,264]; not rejected Avg 0 MV 0 UP 0; MV<Avg 0.90, UP<Avg 0.98, UP<MV 0.68; median final log-wealth at horizon Avg 9.6, MV 37.3, UP 39.7

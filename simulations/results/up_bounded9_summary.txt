@@ -1,0 +1,12 @@
+bounded9: nreps=2000, N=16384, total 1035s
+bounded9: UP = uniform mixture over N=16384 quasi-random points of Lambda, nreps=2000
+pair_compl         UP: rej 1.000 mean tau 78.5 median 77 | 104s UP (105s incl. data)
+pair_redund        UP: rej 1.000 mean tau 86.0 median 83 | 106s UP (106s incl. data)
+six_compl          UP: rej 1.000 mean tau 44.0 median 43 | 106s UP (106s incl. data)
+three_redund       UP: rej 1.000 mean tau 84.2 median 81 | 101s UP (102s incl. data)
+nine_graded        UP: rej 1.000 mean tau 34.1 median 33 | 103s UP (103s incl. data)
+four_mixed         UP: rej 1.000 mean tau 56.7 median 55 | 106s UP (106s incl. data)
+single_corr        UP: rej 1.000 mean tau 130.6 median 126 | 100s UP (101s incl. data)
+single_iso         UP: rej 1.000 mean tau 145.3 median 132 | 107s UP (107s incl. data)
+null_tied          UP: rej 0.037 mean tau 222.6 median 199 | 99s UP (100s incl. data)
+null_partial       UP: rej 0.001 mean tau 108.0 median 108 | 98s UP (98s incl. data)

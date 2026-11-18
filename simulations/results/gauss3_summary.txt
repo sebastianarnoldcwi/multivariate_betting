@@ -1,0 +1,12 @@
+gauss3: nreps=2000, total 333s
+epochs [16, 32, 64, 128, 256, 512] 1/q_mv [7.38, 3.29, 2.15, 1.66, 1.41, 1.27] 1/q_un [4.34, 2.5, 1.83, 1.5, 1.32, 1.22]
+three_equal_neg    mu=(0.15, 0.15, 0.15) rho=-0.4 act=3 | rej Avg/MV/Avg-or/MV-or = 1.000/1.000/1.000/1.000 naive 1.000/1.000 | mean tau = 352.5/82.5/165.0/20.1 | median = 352/78/160/16 | 34s
+three_equal_ind    mu=(0.15, 0.15, 0.15) rho=+0.0 act=3 | rej Avg/MV/Avg-or/MV-or = 0.998/1.000/1.000/1.000 naive 1.000/1.000 | mean tau = 381.1/256.7/183.0/92.0 | median = 365/240/165/72 | 34s
+three_equal_pos    mu=(0.15, 0.15, 0.15) rho=+0.8 act=3 | rej Avg/MV/Avg-or/MV-or = 0.963/0.941/0.994/0.991 naive 0.977/0.953 | mean tau = 442.1/469.4/231.6/224.3 | median = 414/439/190/178 | 33s
+two_equal_ind      mu=(0.18, 0.18, 0.0) rho=+0.0 act=2 | rej Avg/MV/Avg-or/MV-or = 1.000/1.000/1.000/1.000 naive 1.000/1.000 | mean tau = 337.0/261.0/160.7/95.7 | median = 315/242/140/74 | 32s
+three_graded_neg   mu=(0.24, 0.15, 0.08) rho=-0.4 act=3 | rej Avg/MV/Avg-or/MV-or = 1.000/1.000/1.000/1.000 naive 1.000/1.000 | mean tau = 256.9/77.1/118.1/18.4 | median = 254/74/107/14 | 33s
+single_ind         mu=(0.26, 0.0, 0.0) rho=+0.0 act=1 | rej Avg/MV/Avg-or/MV-or = 1.000/1.000/1.000/1.000 naive 1.000/1.000 | mean tau = 254.5/248.0/124.4/93.5 | median = 238/230/101/71 | 33s
+null_tied_ind      mu=(0.0, 0.0, 0.0) rho=+0.0 act=0 | rej Avg/MV/Avg-or/MV-or = 0.002/0.003/0.000/0.000 naive 0.033/0.062 | mean tau = nan/nan/nan/nan | median = nan/nan/nan/nan | 32s
+null_tied_pos      mu=(0.0, 0.0, 0.0) rho=+0.8 act=0 | rej Avg/MV/Avg-or/MV-or = 0.004/0.004/0.000/0.000 naive 0.029/0.038 | mean tau = nan/nan/nan/nan | median = nan/nan/nan/nan | 34s
+null_partial_ind   mu=(0.0, 0.0, -0.2) rho=+0.0 act=0 | rej Avg/MV/Avg-or/MV-or = 0.001/0.005/0.000/0.000 naive 0.021/0.041 | mean tau = nan/nan/nan/nan | median = nan/nan/nan/nan | 34s
+null_partial_pos   mu=(0.0, 0.0, -0.2) rho=+0.8 act=0 | rej Avg/MV/Avg-or/MV-or = 0.002/0.003/0.000/0.000 naive 0.021/0.041 | mean tau = nan/nan/nan/nan | median = nan/nan/nan/nan | 32s

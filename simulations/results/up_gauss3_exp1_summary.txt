@@ -1,0 +1,12 @@
+gauss3: nreps=2000, N=256, total 1101s
+gauss3: UP = mixture over the orthant under i.i.d. Exp(1) coordinates (mean stake 1 per coordinate), exact up to the Gaussian orthant probability (Genz, 256 QMC points), nreps=2000; columns [UP-sc (scaled bets, epoch penalty as MV), UP-or (true Sigma)]
+three_equal_neg    UP-sc: rej 1.000 mean tau 119.2 median 116 | UP-or: rej 1.000 mean tau 34.5 median 30 | 15s UP
+three_equal_ind    UP-sc: rej 0.999 mean tau 413.7 median 399 | UP-or: rej 1.000 mean tau 198.9 median 179 | 53s UP
+three_equal_pos    UP-sc: rej 0.496 mean tau 701.6 median 726 | UP-or: rej 0.797 mean tau 510.7 median 518 | 142s UP
+two_equal_ind      UP-sc: rej 0.992 mean tau 459.3 median 444 | UP-or: rej 1.000 mean tau 240.4 median 224 | 71s UP
+three_graded_neg   UP-sc: rej 1.000 mean tau 111.0 median 109 | UP-or: rej 1.000 mean tau 31.0 median 27 | 13s UP
+single_ind         UP-sc: rej 0.994 mean tau 478.2 median 469 | UP-or: rej 1.000 mean tau 258.8 median 241 | 70s UP
+null_tied_ind      UP-sc: rej 0.000 mean tau nan median nan | UP-or: rej 0.019 mean tau 29.1 median 8 | 178s UP
+null_tied_pos      UP-sc: rej 0.000 mean tau nan median nan | UP-or: rej 0.013 mean tau 15.0 median 4 | 194s UP
+null_partial_ind   UP-sc: rej 0.000 mean tau nan median nan | UP-or: rej 0.013 mean tau 7.1 median 6 | 180s UP
+null_partial_pos   UP-sc: rej 0.000 mean tau nan median nan | UP-or: rej 0.010 mean tau 4.2 median 2 | 180s UP

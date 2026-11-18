@@ -1,0 +1,5 @@
+endpoints ['visit', 'oop', 'borrow', 'phq2', 'baddays', 'fairpoor', 'unhappy', 'er'] (p=8), kappa=0.7, pairs 6609
+  alpha=0.05: rejection Avg 363, MV 279, UP 90
+  alpha=0.001: rejection Avg 814, MV 606, UP 520
+  alpha=1e-05: rejection Avg 1731, MV 674, UP 674
+  final log-wealth Avg 38.0, MV 148.2, UP 142.6; at round 1000: 7.5, 15.8, 16.5

@@ -1,0 +1,12 @@
+gauss9: nreps=2000, N=256, total 3276s
+gauss9: UP = Exp(1)-prior mixture over the orthant, exact up to the Gaussian orthant probability (Genz, 256 QMC points), nreps=2000; columns [UP-sc (scaled bets, epoch penalty as MV), UP-or (true Sigma)]
+pair_compl         UP-sc: rej 1.000 mean tau 349.7 median 343 | UP-or: rej 1.000 mean tau 126.0 median 123 | 151s UP
+pair_redund        UP-sc: rej 0.998 mean tau 592.3 median 584 | UP-or: rej 1.000 mean tau 268.6 median 262 | 281s UP
+six_compl          UP-sc: rej 1.000 mean tau 227.8 median 225 | UP-or: rej 1.000 mean tau 58.7 median 55 | 86s UP
+three_redund       UP-sc: rej 0.978 mean tau 653.7 median 655 | UP-or: rej 1.000 mean tau 304.5 median 302 | 301s UP
+nine_graded        UP-sc: rej 1.000 mean tau 167.4 median 165 | UP-or: rej 1.000 mean tau 33.5 median 31 | 57s UP
+four_mixed         UP-sc: rej 1.000 mean tau 275.5 median 273 | UP-or: rej 1.000 mean tau 85.7 median 85 | 110s UP
+single_corr        UP-sc: rej 0.950 mean tau 705.9 median 708 | UP-or: rej 1.000 mean tau 361.4 median 354 | 336s UP
+single_iso         UP-sc: rej 0.068 mean tau 861.3 median 885 | UP-or: rej 0.585 mean tau 696.5 median 740 | 574s UP
+null_tied          UP-sc: rej 0.001 mean tau 18.0 median 18 | UP-or: rej 0.009 mean tau 3.2 median 2 | 661s UP
+null_partial       UP-sc: rej 0.000 mean tau nan median nan | UP-or: rej 0.005 mean tau 5.6 median 2 | 707s UP

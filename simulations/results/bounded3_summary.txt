@@ -1,0 +1,11 @@
+bounded3: nreps=2000, total 207s
+three_equal_neg    mu=(0.1, 0.1, 0.1) rho=-0.4 act=3 | rej Avg/MV/Avg-or/MV-or = 1.000/1.000/1.000/1.000 | mean tau = 97.9/51.8/84.1/34.8 | median = 92/52/82/34 | 34s
+three_equal_ind    mu=(0.1, 0.1, 0.1) rho=+0.0 act=3 | rej Avg/MV/Avg-or/MV-or = 1.000/1.000/1.000/1.000 | mean tau = 112.1/76.2/91.8/50.2 | median = 100/66/84/43 | 31s
+three_equal_pos    mu=(0.1, 0.1, 0.1) rho=+0.8 act=3 | rej Avg/MV/Avg-or/MV-or = 0.985/0.979/0.997/0.994 | mean tau = 150.8/152.7/112.5/108.2 | median = 131/128/93/86 | 14s
+two_equal_ind      mu=(0.12, 0.12, 0.0) rho=+0.0 act=2 | rej Avg/MV/Avg-or/MV-or = 1.000/1.000/1.000/1.000 | mean tau = 102.1/77.1/81.7/48.2 | median = 88/63/70/39 | 26s
+three_graded_neg   mu=(0.15, 0.1, 0.05) rho=-0.4 act=3 | rej Avg/MV/Avg-or/MV-or = 1.000/1.000/1.000/1.000 | mean tau = 78.2/47.3/65.5/32.0 | median = 71/46/62/31 | 31s
+single_ind         mu=(0.15, 0.0, 0.0) rho=+0.0 act=1 | rej Avg/MV/Avg-or/MV-or = 1.000/1.000/1.000/1.000 | mean tau = 101.1/96.4/79.4/59.8 | median = 91/80/67/48 | 18s
+null_tied_ind      mu=(0.0, 0.0, 0.0) rho=+0.0 act=0 | rej Avg/MV/Avg-or/MV-or = 0.025/0.043/0.000/0.000 | mean tau = nan/nan/nan/nan | median = nan/nan/nan/nan | 14s
+null_tied_pos      mu=(0.0, 0.0, 0.0) rho=+0.8 act=0 | rej Avg/MV/Avg-or/MV-or = 0.025/0.034/0.000/0.000 | mean tau = nan/nan/nan/nan | median = nan/nan/nan/nan | 13s
+null_partial_ind   mu=(0.0, 0.0, -0.15) rho=+0.0 act=0 | rej Avg/MV/Avg-or/MV-or = 0.014/0.025/0.000/0.000 | mean tau = nan/nan/nan/nan | median = nan/nan/nan/nan | 14s
+null_partial_pos   mu=(0.0, 0.0, -0.15) rho=+0.8 act=0 | rej Avg/MV/Avg-or/MV-or = 0.015/0.025/0.000/0.000 | mean tau = nan/nan/nan/nan | median = nan/nan/nan/nan | 13s

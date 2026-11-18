@@ -1,0 +1,4 @@
+UP on the OHIE case study: 6609 pairs, p = 8, N = 16384 points, alpha = 0.05
+kappa = 0.7: rejection round 90; log-wealth at rounds 300/500/1000/1500/6609: 4.73 5.71 16.48 24.90 142.57; rejection at alpha 0.01/1e-3/1e-5: 296/520/674
+kappa = 1.0: rejection round 78; log-wealth at rounds 300/500/1000/1500/6609: 4.11 4.18 14.65 22.66 140.15; rejection at alpha 0.01/1e-3/1e-5: 305/631/813
+permutation null (100, kappa 0.7): fraction with max log UP >= log(1/alpha): 0.050; median max 0.60; median final -17.59

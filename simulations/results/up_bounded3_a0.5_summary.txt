@@ -1,0 +1,12 @@
+bounded3: nreps=2000, N=4096, total 188s
+bounded3: UP = Dirichlet(0.5) mixture over N=4096 quasi-random points of Lambda, nreps=2000
+three_equal_neg    UP: rej 1.000 mean tau 44.9 median 44 | 25s UP (25s incl. data)
+three_equal_ind    UP: rej 1.000 mean tau 60.7 median 53 | 19s UP (19s incl. data)
+three_equal_pos    UP: rej 0.988 mean tau 121.8 median 88 | 18s UP (18s incl. data)
+two_equal_ind      UP: rej 1.000 mean tau 68.3 median 58 | 18s UP (18s incl. data)
+three_graded_neg   UP: rej 1.000 mean tau 42.2 median 41 | 18s UP (18s incl. data)
+single_ind         UP: rej 1.000 mean tau 87.8 median 73 | 18s UP (18s incl. data)
+null_tied_ind      UP: rej 0.043 mean tau 113.4 median 92 | 21s UP (21s incl. data)
+null_tied_pos      UP: rej 0.037 mean tau 66.0 median 36 | 18s UP (18s incl. data)
+null_partial_ind   UP: rej 0.010 mean tau 148.8 median 76 | 16s UP (16s incl. data)
+null_partial_pos   UP: rej 0.013 mean tau 69.4 median 56 | 17s UP (17s incl. data)

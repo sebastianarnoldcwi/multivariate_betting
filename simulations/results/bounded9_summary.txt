@@ -1,0 +1,11 @@
+bounded9: nreps=2000, total 571s
+pair_compl     nviol=2 act=2 | rej Avg/MV/Avg-or/MV-or = 1.000/1.000/1.000/1.000 | mean tau = 80.5/44.2/63.9/24.7 | median = 77/43/62/24 | 62s
+pair_redund    nviol=2 act=4 | rej Avg/MV/Avg-or/MV-or = 1.000/1.000/1.000/1.000 | mean tau = 101.4/69.4/79.5/38.5 | median = 90/66/70/36 | 63s
+six_compl      nviol=6 act=6 | rej Avg/MV/Avg-or/MV-or = 1.000/1.000/1.000/1.000 | mean tau = 78.7/49.8/65.5/29.1 | median = 75/48/65/28 | 63s
+three_redund   nviol=3 act=5 | rej Avg/MV/Avg-or/MV-or = 1.000/1.000/1.000/1.000 | mean tau = 133.5/91.9/105.2/48.9 | median = 120/86/92/45 | 62s
+nine_graded    nviol=9 act=5 | rej Avg/MV/Avg-or/MV-or = 1.000/1.000/1.000/1.000 | mean tau = 67.3/47.5/56.6/26.5 | median = 63/46/55/26 | 61s
+four_mixed     nviol=4 act=4 | rej Avg/MV/Avg-or/MV-or = 1.000/1.000/1.000/1.000 | mean tau = 78.2/47.9/64.7/27.3 | median = 74/47/62/26 | 62s
+single_corr    nviol=1 act=3 | rej Avg/MV/Avg-or/MV-or = 1.000/1.000/1.000/1.000 | mean tau = 129.2/80.4/101.8/42.9 | median = 118/75/90/39 | 63s
+single_iso     nviol=1 act=3 | rej Avg/MV/Avg-or/MV-or = 1.000/0.996/1.000/1.000 | mean tau = 127.1/120.1/100.7/59.6 | median = 114/98/86/48 | 56s
+null_tied      nviol=0 act=0 | rej Avg/MV/Avg-or/MV-or = 0.017/0.045/0.000/0.000 | mean tau = nan/nan/nan/nan | median = nan/nan/nan/nan | 43s
+null_partial   nviol=0 act=0 | rej Avg/MV/Avg-or/MV-or = 0.013/0.040/0.000/0.000 | mean tau = nan/nan/nan/nan | median = nan/nan/nan/nan | 37s
